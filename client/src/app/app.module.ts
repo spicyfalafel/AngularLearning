@@ -21,6 +21,7 @@ import {RegisterComponent} from "./register/register.component";
 import {HomeComponent} from "./home/home.component";
 import {PomodoroComponent} from "./pomodoro/pomodoro.component";
 import {PomodoroTaskComponent} from "./pomodoro/pomodoro-task/pomodoro-task.component";
+import {CountdownComponent} from "./pomodoro/countdown/countdown.component";
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import {PomodoroTaskComponent} from "./pomodoro/pomodoro-task/pomodoro-task.comp
     RegisterComponent,
     HomeComponent,
     PomodoroComponent,
-    PomodoroTaskComponent
+    PomodoroTaskComponent,
+    CountdownComponent
   ],
   imports: [
     BrowserModule,

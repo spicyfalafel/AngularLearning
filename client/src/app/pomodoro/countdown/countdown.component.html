@@ -1,0 +1,6 @@
+<h1>{{minutes}}: {{seconds | number: '2.0'}}</h1>
+<p>
+  <button class="btn btn-primary"
+          [ngClass]="{'btn-danger': !this.isPaused}"
+          (click)="togglePause()">{{buttonLabel}}</button>
+</p>
