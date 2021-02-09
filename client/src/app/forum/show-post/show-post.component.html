@@ -1,0 +1,17 @@
+<div class="list-group">
+  <a *ngFor="let post of posts" href="#"
+     class="list-group-item list-group-item-action flex-column align-items-start">
+    <div class="d-flex w-100 justify-content-between">
+      <h5 class="mb-1">{{post.title}}</h5>
+      <small>3 days ago</small>
+    </div>
+    <p class="mb-1">{{post.description}}</p>
+    <div class="d-flex w-100 justify-content-between">
+      <small>read more...</small>
+      <div>
+        <fa-icon icon="edit" title="edit" class="m-1" (click)="editPost(post)"></fa-icon>
+        <fa-icon icon="trash-alt" class="m-1"></fa-icon>
+      </div>
+    </div>
+  </a>
+</div>

@@ -1,0 +1,57 @@
+<div class="steps">
+  <div class="step" *ngFor="let step of steps" [ngClass]="getClassName(step.Status)">
+    <div class="step__header">{{step.Header}}</div>
+    <div class="step__point">
+      <div class="pre-line"></div>
+      <div class="point"></div>
+      <div class="post-line"></div>
+    </div>
+  </div>
+</div>
+<div class="forms">
+  <ng-container [ngSwitch]="currentStep">
+    <div class="form" *ngSwitchCase="1">
+      <form class="form-signin">
+        <label for="firstNameInput">First name</label>
+        <input name="firstName" type="text" id="firstNameInput" class="form-control"/>
+        <label for="lastNameInput">Last name</label>
+        <input name="lastName" id="lastNameInput" class="form-control"/>
+        <label for="username">Username</label>
+        <input name="username" id="username" class="form-control"/>
+      </form>
+    </div>
+    <div class="form" *ngSwitchCase="2">
+      <form class="form-signin">
+        <h2>Create new password</h2>
+        <label for="password">Enter password</label>
+        <input type="password" id="password" class="form-control"/>
+        <label for="passwordRepeat">Confirm password</label>
+        <input name="lastName" type="password" id="passwordRepeat" class="form-control"/>
+      </form>
+    </div>
+    <div class="form" *ngSwitchCase="3">
+      <div class="container text-center">
+        <h2>Check your info</h2>
+        <p>First name:</p>
+        <p>Last name:</p>
+        <p>Username</p>
+        <p>First name:</p>
+
+      </div>
+    </div>
+  </ng-container>
+  <div class="col text-center">
+    <button class="form-control btn btn-outline-dark w-25 text-center" (click)="nextStep()">Ok</button>
+  </div>
+</div>
+<!--
+
+<form class="form-signin">
+  <h2 class="form-signin-heading text-center">Register</h2>
+  <label for="inputUsername" class="sr-only">Username</label>
+  <input name="username" type="text" id="inputUsername" class="form-control">
+  <label for="inputPassword" class="sr-only">Password</label>
+  <input name="password" type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+  <button class="btn btn-lg btn-primary btn-block form-control" type="button">Register</button>
+</form>
+-->

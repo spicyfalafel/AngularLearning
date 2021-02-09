@@ -1,0 +1,26 @@
+<header class="header clearfix">
+  <nav>
+    <ul id="buttons" class="nav nav-pills float-right">
+      <li class="nav-item">
+        <a class="nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <button #addPost type="button" class="btn btn-link" (click)="openAddPopup()">
+          Add
+        </button>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Logout</a>
+      </li>
+    </ul>
+  </nav>
+  <h3 class="text-muted">My blog</h3>
+</header>
+
+<main role="main">
+  <app-show-post></app-show-post>
+</main>
+
+<footer class="footer">
+  <p>&copy; Kek</p>
+</footer>

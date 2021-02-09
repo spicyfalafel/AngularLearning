@@ -1,0 +1,79 @@
+
+
+$primary-color: #2F80ED;
+$secondary-color: #E8E8E8;
+$max-w: 500px;
+
+.steps {
+  margin: 0 auto;
+  display: flex;
+  max-width: $max-w;
+  justify-content: space-between;
+}
+.step__point{
+  display: flex;
+  justify-content: space-between;
+}
+
+.step__header{
+  text-align: center;
+  margin-top: auto;
+}
+.step {
+  flex: 1;
+  margin-top: auto;
+
+  &:first-child .pre-line{
+    visibility: hidden;
+  }
+  &:last-child .post-line{
+    visibility: hidden;
+  }
+}
+
+
+$diameter: 36px;
+.point {
+  min-width: $diameter;
+  width: $diameter;
+  height: $diameter;
+  border-radius: $diameter/2;
+  background: $secondary-color;
+  border: 1px solid transparent;
+  transition: background 1s ease;
+}
+.pre-line, .post-line {
+  height: 1px;
+  width: 100%;
+  background: $secondary-color;
+  transition: background 1s ease;
+  margin-top: $diameter/2;
+}
+
+
+.active {
+  .point {
+    border: 1px solid $primary-color;
+  }
+
+  .pre-line{
+    background: $primary-color;
+  }
+  .post-line{
+    background: $secondary-color;
+  }
+}
+
+.done {
+  .point {
+    border: 1px solid $primary-color;
+    background: $primary-color;
+  }
+  .pre-line, .post-line{
+    background: $primary-color;
+  }
+}
+
+.inactive {
+
+}
